@@ -37,12 +37,6 @@ function Working(){
                     <button className="eduButt butt">+ Education</button>
                 </div>
             </div>
-            <div className="skills">
-                <div className="title">Skills</div>
-                <div className="skillsInput">
-                    <button className="skillsButt butt">+ Skills</button>
-                </div>
-            </div>
         </div>
     )
 }
