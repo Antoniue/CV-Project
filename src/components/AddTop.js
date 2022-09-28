@@ -17,7 +17,6 @@ function AddTop({personalDetails, setPersonal}){
 
     let form = document.querySelector('.personalForm');
     form.addEventListener('submit', (e) => {
-        e.preventDefault();
         let temp = document.querySelector('.nameInput');
         let name = temp.value;
 

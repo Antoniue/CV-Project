@@ -1,12 +1,11 @@
 .box{
     display: grid;
     grid-template-columns: 1f;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
     grid-template-areas: 
     "top"
     "workX"
-    "edu"
-    "skills";
+    "edu";
     background-color: white;
     border: 2px black solid;
     box-shadow: 3px 3px;
@@ -48,10 +47,9 @@
 }
 .workX{
     grid-area: workX;
+    box-shadow: 3px 3px rgba(128, 128, 128, 0.507);
 }
 .edu{
     grid-area: edu;
-}
-.skills{
-    grid-area: skills;
+    box-shadow: 3px 3px rgba(128, 128, 128, 0.507);
 }
