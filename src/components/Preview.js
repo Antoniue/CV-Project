@@ -5,10 +5,6 @@ function Preview({work, ed, personal}){
     let workX = document.querySelector('.workX');
     let edu = document.querySelector('.edu');
     
-    top.innerHTML = '';
-    workX.innerHTML = '';
-    edu.innerHTML = '';
-
     DrawTop(top, personal);
 }
 
