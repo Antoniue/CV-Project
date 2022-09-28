@@ -5,12 +5,16 @@ function AddWork({workExperience, setWorkExperience}){
         '<form class="workForm">'+
             '<label for="companyInput" class="companyLabel" >Company Name</label><br>'+
             '<input type="text" class="companyInput" /><br>'+
+
             '<label for="titleInput" class="titleLabel">Work Title</label><br>'+
             '<input type="text" class="titleInput" /><br>'+
+
             '<label for="tasksInput" class="tasksLabel">Tasks on Job</label><br>'+
             '<input type="text" class="tasksInput" /><br>'+
+
             '<label for="experienceInput" class="experienceLabel">Years Experience</label><br>'+
             '<input type="number" class="experienceInput" /><br>'+
+
             '<input type="submit" value="submit" class="workSubmit" /><br>'+
         '</form>';
     let form = document.querySelector('.workForm');

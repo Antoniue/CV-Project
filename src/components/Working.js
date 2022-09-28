@@ -1,12 +1,18 @@
 import { useState } from 'react';
 import { AddWork } from './AddWork';
+import { AddEdu } from './AddEdu';
 import './Working.css';
+
 
 function Working(){
     const [workExperience, setWorkExperience] = useState([]);
-    const send =()=> {
+    const [education, setEducation] = useState([]);
+    const sendWork = ()=> {
         AddWork({workExperience,setWorkExperience});
-    }
+    };
+    const sendEdu = () => {
+        AddEdu({education, setEducation});
+    };
     return(
         <div className="box">
             <div className="top">
@@ -25,7 +31,7 @@ function Working(){
             <div className="workX">
                 <div className="title">Work Experience</div>
                 <div className="workInput">
-                    <button className="workButt butt" onClick={send}>+ Work Experience</button>
+                    <button className="workButt butt" onClick={sendWork}>+ Work Experience</button>
                 </div>
                 <div className="workI">
 
@@ -34,7 +40,10 @@ function Working(){
             <div className="edu">
                 <div className="title">Education</div>
                 <div className="eduInput">
-                    <button className="eduButt butt">+ Education</button>
+                    <button className="eduButt butt" onClick={sendEdu}>+ Education</button>
+                </div>
+                <div className="eduI">
+
                 </div>
             </div>
         </div>
