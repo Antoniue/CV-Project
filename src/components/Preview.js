@@ -7,9 +7,15 @@ function Preview({work, ed, personal}){
     let workX = document.querySelector('.workX');
     let edu = document.querySelector('.edu');
     
+    workX.innerHTML = '';
+    edu.innerHTML = '';
+    
     DrawTop(top, personal);
-    DrawWork(workX, work);
-    DrawEd(edu, ed);
+
+    if(work.length > 0)
+        DrawWork(workX, work);
+    if(ed.length > 0)
+        DrawEd(edu, ed);
 }
 
 export {Preview};
