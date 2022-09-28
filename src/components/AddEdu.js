@@ -17,7 +17,6 @@ function AddEdu({education, setEducation}){
 
     let form = document.querySelector('.eduForm');
     form.addEventListener('submit', (e) => {
-        e.preventDefault();
         let temp = document.querySelector('.uniInput');
         let name = temp.value;
 
@@ -28,8 +27,8 @@ function AddEdu({education, setEducation}){
         let years = temp.value;
 
         setEducation(prev => [...prev,{"uniName": name, "studyTitle": title, "yearsStudy": years}]);
-        e.preventDefault();
         form.reset();
+        e.preventDefault();
     });
 }
 

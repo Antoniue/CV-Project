@@ -19,7 +19,6 @@ function AddWork({workExperience, setWorkExperience}){
         '</form>';
     let form = document.querySelector('.workForm');
     form.addEventListener('submit', (e) => {
-        e.preventDefault();
         let temp = document.querySelector('.companyInput');
 
         let name = temp.value;

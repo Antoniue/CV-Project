@@ -1,31 +1,38 @@
-import { useState } from 'react';
+import './Working.css';
 import { AddWork } from './AddWork';
 import { AddEdu } from './AddEdu';
-import './Working.css';
+import { useState } from 'react';
+import { AddTop } from './AddTop';
 
-
+let work;
+let ed;
+let personal;
 function Working(){
     const [workExperience, setWorkExperience] = useState([]);
     const [education, setEducation] = useState([]);
+    const [personalDetails, setPersonal] = useState([]);
+
+    work = workExperience;
+    ed = education;
+    personal = personalDetails;
+
     const sendWork = ()=> {
         AddWork({workExperience,setWorkExperience});
     };
     const sendEdu = () => {
         AddEdu({education, setEducation});
     };
+    const sendPers = () => {
+        if(personalDetails.length === 0)
+            AddTop({personalDetails,setPersonal});
+    };
+
     return(
         <div className="box">
             <div className="top">
-                <div className="left">
-                    <div className="firstN">First Name</div>
-                    <div className="lastN">Last Name</div>
-                    <div className="currentR">Current Role</div>
-                </div>
-                <div className="right">
-                    <div className="address">Address</div>
-                    <div className="phone">Phone Number</div>
-                    <div className="email">E-mail</div>
-                    <div className="linkedIn">LinkedIn</div>
+                <button className="personalButt butt" onClick={sendPers}>+Personal Details</button>
+                <div className="topI">
+
                 </div>
             </div>
             <div className="workX">
@@ -50,4 +57,4 @@ function Working(){
     )
 }
 
-export {Working};
+export {Working, work, ed, personal};
